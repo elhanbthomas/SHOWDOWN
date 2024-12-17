@@ -1,0 +1,61 @@
+# Python cache files
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Environment variables and secrets
+.env
+*.env
+
+# Virtual environment folder
+venv/
+env/
+.virtualenv/
+
+# Django-related files
+db.sqlite3         # Ignore SQLite database file (if using SQLite for development)
+*.log              # Log files
+*.pot              # Translation files (compiled)
+*.pyc              # Compiled Python files
+
+# Static and media files (generated during runtime)
+staticfiles/       # Django static files collected
+media/             # Uploaded user files
+
+# Migrations (optional - only if you want to ignore them temporarily)
+**/migrations/*    # Ignore migration files (not recommended for production)
+!**/migrations/__init__.py  # But keep the __init__.py files
+
+# IDEs and Editors
+.vscode/
+.idea/
+*.swp              # Vi/Vim swap files
+*.sublime-project
+*.sublime-workspace
+
+# OS files
+.DS_Store          # macOS
+Thumbs.db          # Windows
+
+# Testing and coverage
+.coverage
+htmlcov/
+*.cover
+.nox/
+.tox/
+dist/
+build/
+*.egg-info/
+
+# Pip and dependencies
+pip-log.txt
+pip-delete-this-directory.txt
+
+# Ignore package manager files
+node_modules/      # If you're using npm or yarn
+package-lock.json
+yarn.lock
+
+# Compiled or temporary files
+*.tmp
+*.temp
