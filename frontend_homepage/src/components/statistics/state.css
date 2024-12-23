@@ -1,0 +1,51 @@
+.state{
+
+    border-radius: 30px;;
+  width:80vw;
+  box-shadow: 0px 0px 20px 2px rgb(107, 106, 106);
+  margin-left:10vw;
+ margin-right:10vw;
+ margin-top:10vw;
+ margin-bottom:10vw;
+
+display: flex;
+justify-content: flex-start;
+}
+.state_thumbnail{
+    font-size:30px ;
+    font-weight: 900;
+    
+    
+
+
+}
+.state_graph{
+    border-radius: 30px;
+    box-shadow: 0px 0px 20px 2px rgb(107, 106, 106);
+
+}
+
+.state_color{
+
+    width:30px;
+    height:30px;
+    margin-top: 8px;;
+    margin-left:10vw;
+    border:3px solid rgb(238, 15, 15) ;
+     background-color:red;
+    border-radius: 30px;;
+}
+.state_thumbnail_flex{
+    width:30vw;
+
+    
+  
+}
+.state_thumbnail_relative{
+    display:flex;
+    position:relative;
+    top:5vw;
+    left:4vh
+
+
+}
