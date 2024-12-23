@@ -221,7 +221,6 @@ opacity:0
     position:relative;
     top:calc(90px);
     width:98vw;
-    height:600px;
     
     
    }
@@ -346,4 +345,15 @@ cursor: pointer;
 .stats_learn_bar{
   width:10vw;
 
+}
+
+.organ_info{
+
+  position: relative;
+  top:250px
+}
+.organ_thumbnail{
+
+  position: relative;
+  left:50%;
 }

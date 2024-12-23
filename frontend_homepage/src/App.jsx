@@ -142,6 +142,7 @@ duration:500
         </div>
          <div  className="stats_learn" onMouseEnter={handleHover} onMouseLeave={handle_nothover}> Learn more
            <div className='stats_learn_bar' style={{
+            width:"0px",
           height:"2px",
 
           backgroundColor:"red",
@@ -150,7 +151,21 @@ duration:500
            } ref={inputRef}  ></div>
          </div>
         </div>
+
+
+        <div className='organ_info'>
+        <div className='organ_thumbnail'>
+
+          Organ facts and transplants information
+        </div>
+
+
+
+
+        </div>
     </>
+
+
   )
 }
 
