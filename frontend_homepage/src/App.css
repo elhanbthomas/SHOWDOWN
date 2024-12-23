@@ -1,0 +1,349 @@
+
+
+.body{
+  background-color: #fcf7ff;
+}
+
+.headers{
+  margin-top: -5vh;
+border-top:15vh dashed #c1faff;
+top:-3vh;
+  width:100vw;
+  height:30vh;
+  background-color:#c1faff;
+  
+  
+}
+
+.pic1{
+  float:right;
+  width:57vw;
+  height:40vh;
+  padding-left:7vw;
+  border:0vw dashed rgb(18, 16, 16);
+  border-right: 0px;
+  border-left: 0px;
+  border-bottom: 0;
+  border-top-left-radius:20vh ;
+  background-color:#ffffff;
+
+ 
+}
+
+.names{
+margin:0px;
+position: relative;
+top:15vh;
+background-color:#c1faff;
+  width:43.5vw;
+  
+  height:30vh;
+  border:0vw dashed rgb(18, 16, 16);
+border-top:0px;
+border-left: 0px;
+border-bottom-right-radius:20vh;
+
+}
+.name1{
+  font-weight: 900;
+  position: absolute;
+  top:0;
+  left:8vw;
+  color:#070707;
+  }
+
+  .menu{
+ background-color: #c1faff;
+    width:98%;
+    height:11vh;
+position: absolute;
+top: 0vh;
+border-bottom:2px dashed #7d5e5e;
+
+    font-size: 30px;
+    display:flex;
+
+    justify-content: space-between;
+    align-items:flex-start;
+    border-radius: 10px;
+  }
+  .option{
+ font-weight: 900;
+color:#358196;
+    text-align: center;
+    margin-top: 2vh;
+  }
+  
+  .hamburger {
+    display: none;
+    position: absolute;
+    top:3.5vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    width: 35px;
+    height: 25px;
+    cursor: pointer;
+  }
+  
+  .bar {display: none;
+
+    width: 100%;
+    height: 4px;
+    background-color: #333;
+    border-radius: 2px;
+  }
+  .about_us_flex{
+
+    display: flex;
+  justify-content: center; /* Center horizontally */
+  align-items: center; /* Optionally center vertically */
+  width: 100%;
+  height: 100vh; /* Full viewport height, adjust as needed */
+  box-sizing: border-box; /* Ensure padding is included in width */
+
+  }
+  .about_us{
+  
+    border-radius: 20px 20px;
+     box-shadow:0px 0px 20px 5px #9a89b4 ;
+    opacity:0;
+    width:800px;
+    height:200px;
+ position: relative;
+ top:10vh;
+ height:500px;
+ overflow: hidden;
+ 
+  }
+  .about_us.visible{
+    opacity:1;
+   
+  }
+
+  
+ .about_front{
+  color:#0c08e9;
+  font-family:'Times New Roman', Times, serif;
+  font-weight: 900;
+  font-size:40px;
+  margin-left: 250px;
+  margin-top: 0px;
+  position:absolute;
+  top:0%;
+   padding: 0%;
+   opacity:0;
+ }
+ .about_front.visible{
+
+  animation-name: about_come;
+  animation-duration: 1s;
+  animation-timing-function: ease-in-out;
+  animation-fill-mode: forwards;
+ }
+ @keyframes about_come {
+  from{
+    opacity:0;
+    transform:translate(3vw);
+  }
+  to{      opacity:1;
+
+    transform:translate(0);
+
+  }
+  
+}
+ .about_detail{
+  color:#9a89b4;
+display: block;
+  position: absolute;
+  top:100px;
+  margin-left:3vw ;
+  margin-right:3vw ;
+  font-size:30px;
+opacity:0
+ }
+
+ .about_detail.visible{
+
+  animation-name: about_detail;
+  animation-duration: 4s;
+  animation-timing-function:cubic-bezier(0.075, 0.82, 0.165, 1);
+  animation-fill-mode: forwards;
+ }
+ @keyframes about_detail {
+  from{opacity: 0;
+    transform:translateY(20vw);
+
+  }
+  to{      opacity:0.8;
+
+    transform:translateY(0vw) ;
+    
+
+
+  }
+  
+}
+
+ .about_team{
+  position: absolute;
+  top:-20vh;
+  left:60vw;
+  height:300px;
+  width:300px;
+ }
+  @media only screen and (max-width: 800px) {
+     .hamburger{
+      display: flex;
+     }
+     .bar{
+      display: flex;
+     }
+    .option{
+ display: none;
+    }
+    .menu .option:nth-child(5){
+      display:inline;
+      position: absolute;
+      top:1.5vh;
+    right: 0;
+    font-size: 20px;
+      
+      
+      
+    
+    }
+    
+  }
+
+  .stats{
+    position:relative;
+    top:calc(90px);
+    width:98vw;
+    height:600px;
+    
+    
+   }
+  .stats1{
+    
+  
+    display: flex;
+    justify-content: space-around;
+   }
+  .stats_heading{
+    color:#0c08e9;
+
+    position: relative;
+    left:40vw;
+
+    font-family:'Times New Roman', Times, serif;
+  font-weight: 900;
+  font-size:40px;
+     width:40vw;
+    
+    
+
+  }
+
+  .stats_hospitals{
+
+      border-radius: 30px;
+      width:200px;
+      height:200px;
+      box-shadow: 0px 0px 40px 2px rgb(80, 75, 75);
+
+
+  }
+  .stats_hospitals_no{
+
+   position:relative;
+   top:30%;
+   left:40%;
+   font-size:30px;
+
+}
+
+.stats_hospitals_heading{
+  color:#0c08e9;
+
+  position:relative;
+  top:40%;
+  left:10%;
+  font-size:20px;
+  
+
+}
+
+
+.stats_acceptors{
+
+  border-radius: 30px;
+  width:200px;
+  height:200px;
+  box-shadow: 0px 0px 40px 2px rgb(80, 75, 75);
+
+
+}
+.stats_acceptors_no{
+
+position:relative;
+top:30%;
+left:40%;
+font-size:30px;
+
+}
+
+.stats_acceptors_heading{
+  color:#0c08e9;
+
+position:relative;
+top:40%;
+font-size:20px;
+ text-align: center;
+
+}
+
+
+
+.stats_donors{
+
+  border-radius: 30px;
+  width:200px;
+  height:200px;
+  box-shadow: 0px 0px 40px 2px rgb(80, 75, 75);
+
+
+}
+.stats_donors_no{
+
+position:relative;
+top:30%;
+left:40%;
+font-size:30px;
+
+}
+
+.stats_donors_heading{
+  color:#0c08e9;
+
+position:relative;
+top:40%;
+font-size:20px;
+text-align: center;
+
+
+}
+.stats_learn{
+  width:110px;
+  font-size: 20px;
+ color:green;
+ position:relative;
+ top:15%;
+ left:80vw;
+cursor: pointer;
+}
+.stats_learn_bar{
+  width:10vw;
+
+}

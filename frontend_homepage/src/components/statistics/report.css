@@ -1,0 +1,53 @@
+
+
+.report{
+
+    border-radius: 30px;;
+  width:80vw;
+  box-shadow: 0px 0px 20px 2px rgb(107, 106, 106);
+  margin-left:10vw;
+ margin-right:10vw;
+ margin-top:10vw;
+ margin-bottom:10vw;
+
+display: flex;
+justify-content: flex-start;
+}
+.report_thumbnail{
+    font-size:30px ;
+    font-weight: 900;
+    
+    
+
+
+}
+.report_graph{
+    border-radius: 30px;
+    box-shadow: 0px 0px 20px 2px rgb(107, 106, 106);
+
+}
+
+.report_color{
+
+    width:30px;
+    height:30px;
+    margin-top: 8px;;
+    margin-left:10vw;
+    border:3px solid rgb(238, 15, 15) ;
+     background-color:red;
+    border-radius: 30px;;
+}
+.report_thumbnail_flex{
+    width:30vw;
+
+    
+  
+}
+.report_thumbnail_relative{
+    display:flex;
+    position:relative;
+    top:5vw;
+    left:4vh
+
+
+}
