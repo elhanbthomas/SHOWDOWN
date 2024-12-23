@@ -4,7 +4,7 @@ from rest_framework.permissions import IsAuthenticated
 from rest_framework.decorators import api_view, permission_classes
 
 from .models import Profile
-@api_view('POST')
+@api_view(['POST'])
 def edit_profile(request):
     user = request.user
     try:

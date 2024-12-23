@@ -13,3 +13,5 @@ class Profile(models.Model):
     pincode = models.CharField(max_length=7)
     user = models.OneToOneField(User, on_delete=models.CASCADE)
     
+    def __str__(self):
+        return self.name
