@@ -1,17 +1,53 @@
 
 
+import { useState,useRef,useEffect } from 'react'
 
 import './heart.css'
 import heart_detail  from '../../assets/heart_detail.png'
 
+import Transplant from './transplantbox';
+import Procedure from './procedurebox';
+import anime from "animejs/lib/anime.es.js";
 
 function Heart(){
+    const  list_items=
 
+    ["Select your primary support person-Choose someone you feel close to who has the time, health, and flexibility to be your caregiver.You need to know you are not aburden to this person. For caregivers,",
+    ,"Prepare a phone/email tree- This will make it easier for your caregiver to update friends and family while cutting down on phone or email volume."
+    ,"Organize your personal affairs- Consider filling out an advanced directive, writing a will, and sharing access to bank accounts, e-mail, or blogs with a trusted loved one. You may also need to fill out Family Medical Leave Act, insurance, or loan deferment paperwork."
+    ,"Consider dependent care- Find someone you trust and set up a plan to take care of your children and/or pets. Ask your doctor when you can expect to see your children and pets after your transplant."
+    
+    
+    
+    ]
+    const prepare1 = useRef(null);
+    const prepare2 = useRef(null);
+
+     const animation1= useRef(null); // Ref to hold the animation instance
+     const animation2= useRef(null); 
+     animation1.current=anime.timeline({
+       easing:"linear"
+      
+      
+      
+       })
+       function handle_prepare(){
+        console.log("hi", prepare2.current.style.left)
+        prepare2.current.style.left = '-1000px'; // Set the left position to 100px
+
+        animation1.current.add({
+
+            targets:prepare2.current,
+            translateX:(0,"900px")
+          
+           
+            })
+       }
 
 return(
 
     <>
-    <div classname="heart">
+    <div className="heart">
            <div className="heart_headline">Heart</div>
 <div className='heart1_flex'>
 <div className="heart_detail">
@@ -23,7 +59,7 @@ return(
 
 
 
- <div className="about_heart">About Heart</div>
+ <div className="about_heart" onClick={handle_prepare}>About Heart</div>
 
  
 <div className="heart_desc">
@@ -38,11 +74,14 @@ The heart is a strong and muscular organ that is about the size of a fist in adu
 </div>
 
 
-<div className='heart_transplant_thumbnail'>
+<div className='heart_transplant_thumbnail' onClick={handle_prepare}>
 
-About a heart transplant operation
+About a heart transplant operation 
 
 </div>
+
+<div ref={prepare1} className='transplant_prepare_final' ><Transplant  list_items={list_items}/></div>
+<div ref={prepare2}  className='procedure_prepare'><Procedure  list_items={list_items}/></div>
 
 
 </>

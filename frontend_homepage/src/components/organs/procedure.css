@@ -1,0 +1,41 @@
+.procedure{
+    border-radius: 20px 20px;
+    box-shadow:0px 0px 20px 5px #9a89b4 ;
+    width:800px;
+  height:900px;
+  
+}
+.procedure_flex{
+display: flex;
+justify-content: center;
+margin:100px
+  
+}
+
+
+.procedure_step{
+    list-style-type: disc;
+    margin: 40px;
+}
+
+
+.procedure_step li{
+    margin:20px;
+    
+}
+
+.procedure_img{
+
+
+    width: 300px;
+    height:200px;
+    position: relative;
+    left:30%;
+
+}
+.procedure_thumbnail{
+ 
+    position: relative;
+    top:2%;
+}
+
