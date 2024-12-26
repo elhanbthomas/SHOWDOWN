@@ -4,6 +4,18 @@ from rest_framework.permissions import IsAuthenticated
 from rest_framework.decorators import api_view, permission_classes
 
 from .models import Profile
+from .serializers import UserSerializer
+
+@api_view(['POST'])
+def registerIndividual(request):
+    serializer = UserSerializer(data=request.data)
+    if serializer.is_valid():
+        serializer.save()
+        return Response({'message': 'Profile created'}, status=200)
+    else:
+        return Response(serializer.error_messages, status=400)
+
+
 @api_view(['POST'])
 def edit_profile(request):
     user = request.user
