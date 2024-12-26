@@ -51,7 +51,12 @@ font-weight: 900;
 
 }
 .transplant_prepare_final{
-    position: absolute;
-    left:30vw;
+  
 
+}
+.transplant_prepare_flex_{
+    position: absolute;
+    display: flex;
+    width:98vw;
+    justify-content: center;
 }
