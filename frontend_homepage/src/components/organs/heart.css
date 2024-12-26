@@ -1,0 +1,62 @@
+.heart_headline{
+
+
+
+    margin:5px;
+    margin:30px;
+    font-size: 30px;
+    text-align: center;
+}
+.heart1_flex{
+    display: flex;
+    justify-content: space-around;
+}
+.heart1{
+
+    border-radius: 20px 20px;
+    box-shadow:0px 0px 20px 5px #9a89b4 ;
+    width:800px;
+  height:500px;
+  text-align: center;
+  
+
+}
+.heart_detail_img{
+    
+    height:510px;
+}
+.about_heart{
+
+    font-size: 30px;;
+    font-weight: 900;
+    margin-top:25px;
+}
+.heart_desc{
+font-size: 30px;;
+margin:20px
+}
+.heart_transplant_thumbnail{
+
+position: top;
+margin-top: 100px;
+text-align: center;
+font-size: 30px;;
+font-weight: 900;
+}
+.procedure_prepare{
+
+
+    position: absolute;
+    left:30vw;
+
+}
+.transplant_prepare_final{
+  
+
+}
+.transplant_prepare_flex_{
+    position: absolute;
+    display: flex;
+    width:98vw;
+    justify-content: center;
+}

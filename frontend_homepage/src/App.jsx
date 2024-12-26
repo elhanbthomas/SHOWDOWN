@@ -4,6 +4,12 @@ import './App.css'
 import organ1 from './assets/ORGAN1.png'
 import organ2 from './assets/ORGAN1.svg'
 import team from './assets/team.svg'
+import heart from './assets/heart.jpg'
+import kidney from './assets/kidney.png'
+import liver from './assets/liver.jpg'
+import stomach from './assets/stomach.png'
+import pancrea from './assets/pancrea.png'
+import cornea from './assets/cornea.jpg'
 import { Button } from "@/components/ui/button"
 import anime from "animejs/lib/anime.es.js";
 
@@ -142,6 +148,7 @@ duration:500
         </div>
          <div  className="stats_learn" onMouseEnter={handleHover} onMouseLeave={handle_nothover}> Learn more
            <div className='stats_learn_bar' style={{
+            width:"0px",
           height:"2px",
 
           backgroundColor:"red",
@@ -150,7 +157,60 @@ duration:500
            } ref={inputRef}  ></div>
          </div>
         </div>
+
+        <div className='organ_info_flex'>
+        <div className='organ_info'>
+        <div className='organ_thumbnail'>
+
+          Organ facts and transplants information
+        </div>
+        <div className='organ_click'>
+
+        <div className='organ_click1'>
+        <div className='organ_kidney'>
+         <img src={kidney} alt="kidney" className='organ_kidney_img'/>
+        <div className='organ_kidney_headline organ_name_common'>Kidney</div>
+        </div>
+
+        {/* heart*/}
+          <div className='organ_heart'>
+          <img src={heart} alt="heart" className='organ_heart_img'/>
+         <div className='organ_heart_headline organ_name_common'>Heart</div>
+         </div>
+
+         {/* liver*/}
+         <div className='organ_liver'>
+          <img src={liver} alt="liver" className='organ_liver_img'/>
+         <div className='organ_liver_headline organ_name_common'>Heart</div>
+         </div>
+         </div>
+         <div className='organ_click2'>
+
+         {/*stomach*/}
+         <div className='organ_stomach'>
+         <img src={stomach} alt="stomach" className='organ_stomach_img'/>
+        <div className='organ_stomach_headline organ_name_common'>Kidney</div>
+        </div>
+
+        {/*cornea*/}
+          <div className='organ_cornea'>
+          <img src={cornea} alt="cornea" className='organ_cornea_img'/>
+         <div className='organ_cornea_headline organ_name_common'>Heart</div>
+         </div>
+
+         {/* pancrea*/}
+         <div className='organ_pancrea'>
+          <img src={pancrea} alt="pancrea" className='organ_pancrea_img'/>
+         <div className='organ_liver_headline organ_name_common'>Heart</div>
+         </div>
+</div>
+</div>
+        </div>
+    
+        </div>
     </>
+
+
   )
 }
 

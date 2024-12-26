@@ -1,0 +1,59 @@
+
+.transplant_prepare{
+   
+}
+.transplant_prepare_not_visible{
+    display: none;
+   
+   }
+.transplant_prepare_flex{
+    border-radius: 20px 20px;
+    box-shadow:0px 0px 20px 5px #9a89b4 ;
+    width:800px;
+  height:900px;
+   
+display: flex;
+justify-content: center;
+  
+}
+.transplant_prepare_flex_not_visible{
+    border-radius: 20px 20px;
+    border-left: 0px solid rgb(250, 248, 248);;
+    box-shadow:25px 0px 20px 1px #c3bcce ;
+
+
+    width:800px;
+  height:900px;
+   
+display: flex;
+justify-content: center;
+  
+}
+
+
+.transplant_prepare_step{
+    list-style-type: disc;
+    margin: 40px;
+}
+
+
+.transplant_prepare_step li{
+    margin:20px;
+    
+}
+
+.transplant_prepare_hospital_img{
+
+
+    width: 200px;
+    height:200px;
+    position: relative;
+    left:30%;
+
+}
+.transplant_prepare_thumbnail{
+ 
+    position: relative;
+    top:2%;
+}
+
