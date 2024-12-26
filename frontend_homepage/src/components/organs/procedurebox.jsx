@@ -1,6 +1,23 @@
 import './procedure.css'
 import  operation from '../../assets/operation2.png'
-function Procedure({list_items}){
+import { useState,useRef,useEffect } from 'react'
+
+
+
+
+
+
+
+function Procedure({list_items,visible}){
+const [flex,setflex]=useState("transplant_prepare_flex")
+
+useEffect(() => {
+  if (visible === "procedure_not_visible") {
+    setflex("procedure_flex_not_visible");
+  } else if (visible !== "procedure_not_visible") {
+    setflex("procedure_flex");
+  }
+}, [visible]);
 
 
 
@@ -9,8 +26,8 @@ function Procedure({list_items}){
 
 <>
 
-<div className="procedure_flex">
-    <div className="procedure">
+<div className={flex}>
+    <div className={visible}>
 <div className="procedure_thumbnail">
     <img src={operation} className="procedure_img"/>
 </div>

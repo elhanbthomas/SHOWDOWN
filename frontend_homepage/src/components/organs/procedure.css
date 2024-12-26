@@ -5,11 +5,29 @@
   height:900px;
   
 }
+.procedure_not_visible{
+    display: none;
+}
 .procedure_flex{
 display: flex;
 justify-content: center;
   
+
 }
+.procedure_flex_not_visible{
+    border-radius: 20px 20px;
+    border-left: 0px solid rgb(250, 248, 248);;
+    box-shadow:22px 0px 20px -10px #c3bcce ;
+
+
+    width:800px;
+  height:900px;
+   
+display: flex;
+justify-content: center;
+  
+}
+
 
 
 .procedure_step{
@@ -37,4 +55,5 @@ justify-content: center;
     position: relative;
     top:2%;
 }
+
 
