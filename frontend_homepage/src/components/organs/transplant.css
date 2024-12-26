@@ -1,16 +1,32 @@
 
 .transplant_prepare{
-
+   
+}
+.transplant_prepare_not_visible{
+    display: none;
+   
+   }
+.transplant_prepare_flex{
     border-radius: 20px 20px;
     box-shadow:0px 0px 20px 5px #9a89b4 ;
     width:800px;
   height:900px;
-}.transplant_prepare_flex{
-    position:absolute;
-
+   
 display: flex;
 justify-content: center;
-margin:100px
+  
+}
+.transplant_prepare_flex_not_visible{
+    border-radius: 20px 20px;
+    border-left: 0px solid rgb(250, 248, 248);;
+    box-shadow:25px 0px 20px 1px #c3bcce ;
+
+
+    width:800px;
+  height:900px;
+   
+display: flex;
+justify-content: center;
   
 }
 

@@ -25,23 +25,30 @@ function Heart(){
 
      const animation1= useRef(null); // Ref to hold the animation instance
      const animation2= useRef(null); 
-     animation1.current=anime.timeline({
-       easing:"linear"
+     const [visible_trans,set_visible_trans]=useState("transplant_prepare")
+     
       
-      
-      
-       })
        function handle_prepare(){
+        animation1.current=anime.timeline({
+          easing:'easeOutExpo'
+         
+         
+         
+          })
+         console.log("hi")
+        set_visible_trans("transplant_prepare_not_visible")
         console.log("hi", prepare2.current.style.left)
-        prepare2.current.style.left = '-1000px'; // Set the left position to 100px
+        prepare2.current.style.left = '0vw'; // Set the left position to 100px
+
 
         animation1.current.add({
 
-            targets:prepare2.current,
-            translateX:(0,"900px")
-          
-           
-            })
+          targets:prepare2.current,
+          translateX:['-10vw','25vw'],
+          duration:2000,
+         
+          })
+        
        }
 
 return(
@@ -80,7 +87,7 @@ About a heart transplant operation
 
 </div>
 
-<div ref={prepare1} className='transplant_prepare_final' ><Transplant  list_items={list_items}/></div>
+<div ref={prepare1} className='transplant_prepare_final' ><Transplant  list_items={list_items} visible={visible_trans}/></div>
 <div ref={prepare2}  className='procedure_prepare'><Procedure  list_items={list_items}/></div>
 
 
