@@ -9,10 +9,14 @@ import Transplant from './transplantbox';
 import Procedure from './procedurebox';
 import Recoverybox from './recoverybox';
 import anime from "animejs/lib/anime.es.js";
+import ArrowForwardIosIcon from '@mui/icons-material/ArrowForwardIos';
+import DeleteIcon from '@mui/icons-material/Delete';
 
 function Heart(){
-    const  list_items=
 
+  console.log(ArrowForwardIosIcon)
+
+    const  list_items=
     ["Select your primary support person-Choose someone you feel close to who has the time, health, and flexibility to be your caregiver.You need to know you are not aburden to this person. For caregivers,",
     ,"Prepare a phone/email tree- This will make it easier for your caregiver to update friends and family while cutting down on phone or email volume."
     ,"Organize your personal affairs- Consider filling out an advanced directive, writing a will, and sharing access to bank accounts, e-mail, or blogs with a trusted loved one. You may also need to fill out Family Medical Leave Act, insurance, or loan deferment paperwork."
@@ -21,6 +25,7 @@ function Heart(){
     
     
     ]
+     let count=1;
     const prepare1 = useRef(null);
     const prepare2 = useRef(null);
    const prepare3=useRef(null)
@@ -33,6 +38,8 @@ function Heart(){
      
       
        function handle_prepare(){
+       prepare2.current.style.display="block"
+        count=2
         animation1.current=anime.timeline({
           easing:'easeOutExpo'
          
@@ -67,6 +74,9 @@ function Heart(){
 
 
        function handle_prepare2(){
+ count=3
+ prepare3.current.style.display="block"
+
         animation2.current=anime.timeline({
           easing:'easeOutExpo'
          
@@ -96,20 +106,12 @@ function Heart(){
        }
 
        const handleResize = () => {
-        if (!prepare2.current) {
-          console.log("prepare2.current is null during handle_prepare");
-          return; // Guard clause
-        }
-        const viewportWidth = window.innerWidth;
-    let pxx= (prepare1.current.getBoundingClientRect().left/ viewportWidth) * 100; // Convert px to vw
-        console.log("bue",prepare1.current.getBoundingClientRect().left,"hi",pxx)
-        //why irregualarity in size after .add opaeration check impace of translate xsee prepare2 after icncreaing width
-           prepare2.current.style.left=`${prepare1.current.getBoundingClientRect().left-190}px`
-           prepare3.current.style.left=`${prepare1.current.getBoundingClientRect().left-190}px`
+ if  (count==2){
+        handle_prepare();}
+    else if(count==3){ 
+      handle_prepare();
 
-           console.log(prepare2.current.style.left)
-
-        //handle_prepare();
+       handle_prepare2();}
       };
        window.addEventListener('resize', handleResize);
        
@@ -149,6 +151,8 @@ The heart is a strong and muscular organ that is about the size of a fist in adu
 About a heart transplant operation 
 
 </div>
+ <div className='arrow_forward'><ArrowForwardIosIcon/></div>
+
 <div className='transplant_prepare_flex_'  onClick={handle_prepare2}>
 <div ref={prepare1} className='transplant_prepare_final' ><Transplant  list_items={list_items} visible={visible_trans}/></div>
 </div>

@@ -44,13 +44,14 @@ font-size: 30px;;
 font-weight: 900;
 }
 .procedure_prepare{
-
+  display:none;
 
     position: absolute;
     left:30vw;
 
 }
 .recoverys{
+    display:none;
 
 
     position: absolute;
@@ -66,4 +67,13 @@ font-weight: 900;
     display: flex;
     width:98vw;
     justify-content: center;
+}
+
+
+.arrow_forward{
+
+    position:relative;
+    top:500px;
+    left:calc(50vw + 450px);
+    z-index:1
 }
