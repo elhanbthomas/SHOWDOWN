@@ -123,7 +123,6 @@ function Heart(){
      handle_prepare2();
      }
       },1);
-       window.addEventListener('click', handleResize);
        
 
 
@@ -310,7 +309,7 @@ The heart is a strong and muscular organ that is about the size of a fist in adu
 </div>
 
 
-<div className='heart_transplant_thumbnail' >
+<div className='heart_transplant_thumbnail' onClick={handleResize} >
 
 About a heart transplant operation 
 
