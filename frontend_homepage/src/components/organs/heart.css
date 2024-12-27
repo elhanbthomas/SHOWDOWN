@@ -71,9 +71,18 @@ font-weight: 900;
 
 
 .arrow_forward{
-
+width:30px;
     position:relative;
     top:500px;
     left:calc(50vw + 450px);
+    z-index:1
+}
+
+.arrow_backward{
+    width:30px;
+
+    position:relative;
+    top:480px;
+    left:calc(48vw - 450px);
     z-index:1
 }
