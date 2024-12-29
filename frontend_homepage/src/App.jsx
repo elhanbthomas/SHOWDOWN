@@ -1,5 +1,6 @@
 import { useState,useRef,useEffect } from 'react'
 import {useInView} from 'react-intersection-observer'
+import {Link} from "react-router"
 import './App.css'
 import organ1 from './assets/ORGAN1.png'
 import organ2 from './assets/ORGAN1.svg'
@@ -94,10 +95,17 @@ duration:500
       <h1 className='name1'>ORGOR </h1>
     </div>
     <div className="menu">
-    <div className="option" >Statistic</div>
+      <Link to="/stats">
+    <div className="option" >Statistic</div></Link>
+
     <div className="option" >About Organs</div>
+    <Link to="/donor" >
     <div className="option">Register for Donor</div>
+    </Link>
+    <Link to="/app_hosp" >
+
     <div className="option">Approved Hospitals</div>
+    </Link>
     <div className="option" >Login/Register</div>
      <div className="hamburger">
   <div className="bar"></div>
@@ -125,7 +133,7 @@ duration:500
        <div className='stats1'>
 
           <div className="stats_hospitals">
-          <div className="stats_hospitals_no">15+</div>
+          <div className="stats_hospitals_no">13+</div>
           <div className="stats_hospitals_heading">Approved Hospitals</div>
 
 
@@ -134,13 +142,13 @@ duration:500
 
 
          <div className="stats_acceptors">
-          <div className="stats_acceptors_no">15+</div>
+          <div className="stats_acceptors_no">14+</div>
           <div className="stats_acceptors_heading">Acceptors</div>
 
         </div>
 
         <div className="stats_donors">
-          <div className="stats_donors_no">15+</div>
+          <div className="stats_donors_no">19+</div>
           <div className="stats_donors_heading">Donors</div>
 
         </div>
@@ -173,15 +181,17 @@ duration:500
         </div>
 
         {/* heart*/}
+        <Link to="/organ_heart">
           <div className='organ_heart'>
           <img src={heart} alt="heart" className='organ_heart_img'/>
          <div className='organ_heart_headline organ_name_common'>Heart</div>
          </div>
+         </Link>
 
          {/* liver*/}
          <div className='organ_liver'>
           <img src={liver} alt="liver" className='organ_liver_img'/>
-         <div className='organ_liver_headline organ_name_common'>Heart</div>
+         <div className='organ_liver_headline organ_name_common'>Liver</div>
          </div>
          </div>
          <div className='organ_click2'>
@@ -189,19 +199,19 @@ duration:500
          {/*stomach*/}
          <div className='organ_stomach'>
          <img src={stomach} alt="stomach" className='organ_stomach_img'/>
-        <div className='organ_stomach_headline organ_name_common'>Kidney</div>
+        <div className='organ_stomach_headline organ_name_common'>Stomach</div>
         </div>
 
         {/*cornea*/}
           <div className='organ_cornea'>
           <img src={cornea} alt="cornea" className='organ_cornea_img'/>
-         <div className='organ_cornea_headline organ_name_common'>Heart</div>
+         <div className='organ_cornea_headline organ_name_common'>Cornea</div>
          </div>
 
          {/* pancrea*/}
          <div className='organ_pancrea'>
           <img src={pancrea} alt="pancrea" className='organ_pancrea_img'/>
-         <div className='organ_liver_headline organ_name_common'>Heart</div>
+         <div className='organ_liver_headline organ_name_common'>Pancrea</div>
          </div>
 </div>
 </div>
