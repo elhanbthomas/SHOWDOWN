@@ -1,10 +1,8 @@
-
-
 import { useState,useRef,useEffect } from 'react'
 import { throttle } from 'lodash';
 
 import './heart.css'
-import heart_detail  from '../../assets/heart_detail.png'
+import kidney_detail  from '../../assets/kidney_detail.png'
 
 import Transplant from './transplantbox';
 import Procedure from './procedurebox';
@@ -12,7 +10,7 @@ import Recoverybox from './recoverybox';
 import anime from "animejs/lib/anime.es.js";
 import ArrowForwardIosIcon from '@mui/icons-material/ArrowForwardIos';
 import ArrowBackIosIcon from '@mui/icons-material/ArrowBackIos';
-function Heart(){
+function Kidney(){
     useEffect(()=>{
 
 
@@ -20,42 +18,42 @@ function Heart(){
     })
   //console.log(ArrowForwardIosIcon)
 
-    const  trans_items_heart_1=
+    const  trans_items_kidney_1=
     [
-      "Select your primary support person - Choose someone you feel close to who has the time, health, and flexibility to be your caregiver, ensuring you do not feel like a burden to them.",
-      "Prepare a phone or email tree - This will make it easier for your caregiver to update friends and family, thereby reducing the volume of calls and emails they have to manage.",
-      "Organize your personal affairs - Fill out an advanced directive, write a will, and share access to bank accounts, email, or blogs with a trusted loved one. Complete necessary paperwork such as Family Medical Leave Act, insurance, or loan deferment forms.",
-      "Consider dependent care - Find someone trustworthy to take care of your children and/or pets. Ask your doctor when you can expect to see them after your transplant.",
-      "Arrange transportation - Plan how to get to the transplant center quickly when you get the call that an organ is available. If you're relocating, make housing arrangements beforehand.",
-      "Pack your bags - Be ready to leave as soon as you get the call that an organ is available. Include insurance information, a list of medications, an extra 24-hour supply of medication, and other essentials."
+        "Select your primary support person - Choose someone close to you who has the time, health, and flexibility to be your caregiver, ensuring that you don’t feel like a burden to them.",
+  "Prepare a phone/email tree - This will make it easier for your caregiver to update friends and family while reducing the volume of phone calls and emails.",
+  "Organize your personal affairs - Consider filling out an advanced directive, writing a will, and sharing access to bank accounts, email, or blogs with a trusted loved one. Also, complete necessary paperwork such as Family Medical Leave Act, insurance, or loan deferment forms.",
+  "Consider dependent care - Find someone you trust to care for your children and/or pets. Ask your doctor when you can expect to see them after your transplant.",
+  "Arrange transportation - Plan how to get to the transplant center quickly when you get the call that an organ is available. Make housing arrangements in advance if you are relocating.",
+    
     ];
     
 
-    const transplant_Procedures = [
-      "Orthotopic Approach-",
-      "Heart Replacement - This common procedure involves replacing the recipient's heart with the donor heart.",
-      "Donor Heart Preparation - The donor heart is removed, preserved, and packed for transport. It must be transplanted within four to five hours.",
-      "Anesthesia and Bypass Machine - The recipient is given general anesthesia and placed on a bypass machine to oxygenate the blood during the transplant.",
-      "Removal of Recipient’s Heart - The recipient's heart is removed to make space for the donor heart.",
-      "Donor Heart Fitting - The donor heart is prepared to fit into the recipient’s chest.",
-      "Implantation - The donor heart is implanted, and the surgery is completed.",
+    const transplant_Procedures_kidney = [
+        "Kidney Transplant Procedure -",
+        "Incision and Access - A lower abdominal incision is made to access the area for kidney placement.",
+        "Donor Kidney Placement - The donor kidney is placed outside the recipient's existing kidneys in the lower abdomen.",
+        "Connection of Blood Vessels - The renal artery and vein from the donor are connected to the recipient's iliac artery and vein.",
+        "Connection of Ureter - The donor ureter is attached to the recipient’s bladder for urine flow.",
+        "Recipient’s Kidney - The recipient’s own kidneys are not typically removed unless necessary.",
+        "Incision Closure - The incision is closed once all connections are made.",
+        
+        "Duration of Surgery -",
+        "Surgical Time - The procedure takes approximately three to four hours, depending on individual circumstances.",
+        "Variation in Surgery Time - Surgery length may vary based on patient factors and complications."
+      ];
       
-      "Heterotopic Approach-",
-      "Heart Addition - In this rare procedure, the recipient's heart is left in place, and the donor heart is connected to the right side of the chest.",
-      "Piggyback Transplantation - Also known as 'piggyback' transplantation, it allows the new heart to assist the original heart if complications arise.",
-      "Advantages - The new heart can act as an assist device, providing support in case of complications.",
-      "Physician Consultation - Your physician will explain why this approach may better suit your needs."
-    ];
+      
+      
 
-
-    const recoveryProcess = [
-      "Postoperative Care Team - Recovery begins with a team of health professionals who provide continuous care and monitoring to ensure proper recovery.",
-      "Comprehensive Monitoring - Post-surgical monitoring evaluates the body’s response to the new organ, checking for signs of rejection or complications.",
-      "Time in Recovery Room - The amount of time spent in the recovery room varies from patient to patient, depending on individual recovery needs.",
-      "Waking Up from Surgery - Recovery time includes gradually waking up from anesthesia and gaining awareness before moving on to the next phase of recovery.",
-      "Preparation for Discharge - The time it takes to reach the point where you are ready to go home will differ among patients, based on how well you’re healing.",
-      "Individual Recovery Experience - Since recovery experiences are unique, it is essential to consult with your physician about what to expect during your recovery process."
-    ];
+      const recoveryProcess_kidney = [
+        "Postoperative Care Team - Recovery begins with a team of health professionals who provide continuous care and monitoring to ensure proper recovery.",
+        "Comprehensive Monitoring - Post-surgical monitoring evaluates the body’s response to the new kidney, checking for signs of rejection or complications.",
+        "Time in Recovery Room - The amount of time spent in the recovery room varies from patient to patient, depending on individual recovery needs.",
+        "Waking Up from Surgery - Recovery time includes gradually waking up from anesthesia and gaining awareness before moving on to the next phase of recovery.",
+        "Preparation for Discharge - The time it takes to reach the point where you are ready to go home will differ among patients, based on how well you’re healing.",
+        "Individual Recovery Experience - Since recovery experiences are unique, it is essential to consult with your physician about what to expect during your recovery process."
+      ];
     const prepare1 = useRef(null);
     const prepare2 = useRef(null);
    const prepare3=useRef(null)
@@ -314,14 +312,14 @@ return(
 <div className='heart1_flex'>
 <div className="heart_detail">
 
-<img src={heart_detail} alt="heart_photo"  className='heart_detail_img'/>
+<img src={kidney_detail} alt="heart_photo"  className='heart_detail_img'/>
 </div>
 <div className="heart1">
 
 
 
 
- <div className="about_heart" >About Heart</div>
+ <div className="about_heart" >About Kindey</div>
 
  
 <div className="heart_desc">
@@ -338,7 +336,7 @@ The heart is a strong and muscular organ that is about the size of a fist in adu
 
 <div className='heart_transplant_thumbnail' onClick={handleResize} >
 
-About a heart transplant operation 
+About a a Kindey transplant operation 
 
 </div>
  <div className='arrow_forward'onClick={handle_forwardarrow}><ArrowForwardIosIcon/></div>
@@ -346,13 +344,13 @@ About a heart transplant operation
 
 
 <div className='transplant_prepare_flex_'  >
-<div ref={prepare1} className='transplant_prepare_final' ><Transplant  list_items={trans_items_heart_1} visible={visible_trans}/></div>
+<div ref={prepare1} className='transplant_prepare_final' ><Transplant  list_items={trans_items_kidney_1} visible={visible_trans}/></div>
 </div>
-{<div ref={prepare2}  className='procedure_prepare'><Procedure  list_items={transplant_Procedures} visible={visible_procedure}/>  </div>
+{<div ref={prepare2}  className='procedure_prepare'><Procedure  list_items={transplant_Procedures_kidney} visible={visible_procedure}/>  </div>
 }
 
 
-<div ref={prepare3}  className='recoverys'><Recoverybox  list_items={recoveryProcess} />
+<div ref={prepare3}  className='recoverys'><Recoverybox  list_items={recoveryProcess_kidney} />
 
 </div>
   
@@ -365,4 +363,4 @@ About a heart transplant operation
 
 }
 
-export default  Heart;
+export default  Kidney;

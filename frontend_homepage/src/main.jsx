@@ -10,6 +10,7 @@ import Heart from './components/organs/heart'
 import Donor_home from './components/register_donor_home/donor_home'
 import Approved_hospital from './components/approved_hospital/app_hosp'
 import Layout from './components/layout';
+import Kidney from './components/organs/kidney';
 
 const router=createBrowserRouter(
 
@@ -21,6 +22,8 @@ createRoutesFromElements(
 <Route path="donor" element={<Donor_home/>}/>
 <Route path="app_hosp" element={<Approved_hospital/>}/>
 <Route path="organ_heart" element={<Heart/>}/>
+<Route path="organ_kidney" element={<Kidney/>}/>
+
 
 
   </Route>

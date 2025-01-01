@@ -31,7 +31,7 @@ useEffect(() => {
 <div className="procedure_thumbnail">
     <img src={operation} className="procedure_img"/>
 </div>
-<div className='procedure_short'>Preparing for the hospital
+<div className='procedure_short'><b>The Procedure</b>
 </div>
     <div className='procedure_description'></div>
 <ol className='procedure_step'>

@@ -175,10 +175,12 @@ duration:500
         <div className='organ_click'>
 
         <div className='organ_click1'>
+          <Link to ="/organ_kidney">
         <div className='organ_kidney'>
          <img src={kidney} alt="kidney" className='organ_kidney_img'/>
         <div className='organ_kidney_headline organ_name_common'>Kidney</div>
         </div>
+        </Link>
 
         {/* heart*/}
         <Link to="/organ_heart">

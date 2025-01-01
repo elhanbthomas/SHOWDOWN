@@ -24,7 +24,8 @@ useEffect(() => {
 <div className="transplant_prepare_thumbnail">
     <img src={hospital} className="transplant_prepare_hospital_img"/>
 </div>
-<div className='transplant_prepare_short'>Preparing for the hospital
+<div className='transplant_prepare_short'>
+  <b>Preparing for the hospital</b>
 </div>
     
 <ol className='transplant_prepare_step'>
